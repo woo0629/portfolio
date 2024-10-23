@@ -1,30 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import emailjs from "emailjs-com";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
 // app/contact/page.tsx
+interface FormData {
+  name?: string; // 이름 필드는 선택 사항입니다
+  email?: string; // 이메일 필드는 선택 사항입니다
+  message?: string; // 이메일 필드는 선택 사항입니다
+  // 필요한 다른 필드도 추가하세요
+}
+interface Errors {
+  name?: string;
+  email?: string;
+  message?: string;
+}
+
 const ContactPage = () => {
-  const [formData, setFormdata] = useState({
+  const [formData, setFormdata] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
 
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<Errors>({});
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+  ) => {
     const { name, value } = e.target;
     setFormdata({ ...formData, [name]: value });
 
     setErrors({ ...errors, [name]: "" });
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const newErrors = {};
+    const newErrors: { name?: string; email?: string; message?: string } = {};
 
     // 각 필드에 대해 검증
     if (!formData.name) {
@@ -45,8 +59,8 @@ const ContactPage = () => {
 
     emailjs
       .send(
-        process.env.NEXT_PUBLIC_SERVICEID,
-        process.env.NEXT_PUBLIC_TEMPLATEID,
+        process.env.NEXT_PUBLIC_SERVICEID as string,
+        process.env.NEXT_PUBLIC_TEMPLATEID as string,
 
         {
           from_name: formData.name,

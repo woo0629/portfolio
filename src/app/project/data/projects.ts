@@ -5,8 +5,11 @@ export interface Project {
   description: string;
   link: string;
   image: string;
-  width: number;
-  height: number;
+  period: string;
+  language: string;
+  library: string;
+  pdfUrl: string;
+  gitUrl: string;
 }
 
 export const projects: Project[] = [

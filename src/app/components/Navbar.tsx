@@ -1,8 +1,11 @@
 // components/Navbar.tsx
 import { useState } from "react";
 import Link from "next/link";
+interface NavbarProps {
+  pathname: string;
+}
 
-const Navbar = ({ pathname }) => {
+const Navbar: React.FC<NavbarProps> = ({ pathname }) => {
   const [isOpen, setIsOpen] = useState(false);
   const getPathname = pathname;
 
