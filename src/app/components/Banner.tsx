@@ -1,4 +1,7 @@
-const Banner = ({ pathname }) => {
+interface BannerProps {
+  pathname: string;
+}
+const Banner: React.FC<BannerProps> = ({ pathname }) => {
   const getBannerText = () => {
     if (pathname.startsWith("/project/")) {
       return "Project";
