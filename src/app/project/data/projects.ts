@@ -19,7 +19,7 @@ export const projects: Project[] = [
     language: "CSS / Javascript",
     library: "Next.js",
     pdfUrl: "Next.js",
-    gitUrl: "Next.js",
+    gitUrl: "https://github.com/woo0629/portfolio",
   },
   {
     link: "Project-2",
