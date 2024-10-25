@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HomePage = () => {
   return (
-    <div className="relative bg-[url('/image/homebackgroundimage.jpg')] bg-cover bg-center px-4 lg:px-0">
+    <div className="relative bg-[url('/image/homebackgroundimage.jpg')] bg-cover bg-center px-8 lg:px-0">
       <div className="flex flex-col items-center min-h-screen mx-auto max-w-5xl text-white">
         <div className="pt-40 text-center">
           <p className="mt-4 text-3xl font-bold ">
