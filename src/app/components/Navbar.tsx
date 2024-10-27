@@ -22,7 +22,6 @@ const Navbar: React.FC<NavbarProps> = ({ pathname }) => {
           JJW_Portfolio
         </Link>
 
-        {/* 햄버거 메뉴 버튼 (작은 화면에서만 보이도록 설정) */}
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
@@ -45,7 +44,6 @@ const Navbar: React.FC<NavbarProps> = ({ pathname }) => {
           </button>
         </div>
 
-        {/* 네비게이션 메뉴 (큰 화면에서만 보이도록 설정) */}
         <ul className="hidden lg:flex space-x-11 text-white">
           <li>
             <Link href="/" className="hover:text-blue-400">
@@ -70,11 +68,9 @@ const Navbar: React.FC<NavbarProps> = ({ pathname }) => {
         </ul>
       </nav>
 
-      {/* 모달 네비게이션 메뉴 (작은 화면에서 햄버거 버튼 클릭 시 표시) */}
       {isOpen && (
         <div className="lg:hidden fixed inset-0 bg-gray-950 bg-opacity-90 z-10">
           <div className="fixed right-0 flex flex-col items-center h-screen space-y-8 w-1/3 bg-gray-950">
-            {/* 나가기 버튼 */}
             <button
               onClick={toggleMenu}
               bg-gray-950

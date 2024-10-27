@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 "use client";
 
 import Navbar from "@components/Navbar";
@@ -13,11 +12,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <body>
-        {/* <div className="relative bg-[url('/image/HomeBackGroundImage.jpg')] bg-cover bg-center" > */}
         <div>
           <div>
             <Navbar pathname={pathname} />
-            {/* 현재 경로가 홈("/")일 때 Page 컴포넌트 호출 안함 */}
             {pathname !== "/" && <Banner pathname={pathname} />}
           </div>
         </div>

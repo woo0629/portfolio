@@ -4,12 +4,11 @@ import { useState, FormEvent } from "react";
 import emailjs from "emailjs-com";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { MdOutlineEmail } from "react-icons/md";
-// app/contact/page.tsx
+
 interface FormData {
-  name?: string; // 이름 필드는 선택 사항입니다
-  email?: string; // 이메일 필드는 선택 사항입니다
-  message?: string; // 이메일 필드는 선택 사항입니다
-  // 필요한 다른 필드도 추가하세요
+  name?: string;
+  email?: string;
+  message?: string;
 }
 interface Errors {
   name?: string;
@@ -51,7 +50,6 @@ const ContactPage = () => {
       newErrors.message = "*메시지를 입력해 주세요.";
     }
 
-    // 에러가 있는 경우, 에러 메시지 설정하고 종료
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
@@ -116,7 +114,7 @@ const ContactPage = () => {
                   </span>
                 )}
               </div>
-              {/* 에러 메시지 표시 */}
+
               <input
                 type="text"
                 name="name"
@@ -133,7 +131,7 @@ const ContactPage = () => {
                   <span className="text-xs text-red-500 ">{errors.email}</span>
                 )}{" "}
               </div>
-              {/* 에러 메시지 표시 */}
+
               <input
                 type="email"
                 name="email"
@@ -152,7 +150,6 @@ const ContactPage = () => {
                 )}{" "}
               </div>
 
-              {/* 에러 메시지 표시 */}
               <textarea
                 name="message"
                 value={formData.message}
