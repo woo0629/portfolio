@@ -1,4 +1,3 @@
-// app/components/Footer.tsx
 const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-center bg-customBlue text-white p-12">
