@@ -19,7 +19,7 @@ export const projects: Project[] = [
     period: "2024-10-21 - 2004-10-26",
     language: "CSS / Javascript",
     library: "Next.js",
-    pdfUrl: "Next.js",
+    pdfUrl: "/image/portfolio.pdf",
     gitUrl: "https://github.com/woo0629/portfolio",
   },
   {
