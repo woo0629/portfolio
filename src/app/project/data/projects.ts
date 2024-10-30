@@ -41,7 +41,7 @@ export const projects: Project[] = [
     language: "CSS / Javascript / Node.js / Python",
     period: "2023.12.01 - 2023.12.22",
     library: "React",
-    pdfUrl: "Next.js",
+    pdfUrl: "/image/digging.pdf",
     gitUrl: "https://github.com/woo0629/Digging-fr",
   },
 ];
